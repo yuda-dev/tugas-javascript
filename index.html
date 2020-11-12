@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    //tugas javascript ( baru sempet ngerjain dikarenakan kemarin sakit)
+    <br>
+    <script>
+        var daftarBuah = ["2. Apel", "5.Jeruk", "3. Anggur", "4. Semangka", "1. Mangga"];
+
+        daftarBuah.sort();
+        daftarBuah.forEach((data) => {
+            document.write(`${data}<br>`);
+        });
+
+        //bisa dilhat di console
+        var kalimat = "saya sangat senang belajar javascript";
+        var explode = kalimat.split(" ");
+        console.log(explode);
+
+        document.write(`<br>`);
+    </script>
+
+    //tugas es6
+    <script>
+        //1. mengubah fungsi menjadi fungsi arrow
+
+        //es6
+        const golden = () => alert("this is golden!!")
+        golden()
+
+        //2.Sederhanakan menjadi Object literal di ES6
+
+        //es6
+        const newFunction = function literal(firstName, lastName) {
+            return {
+                firstName,
+                lastName,
+                fullName() {
+                    console.log(firstName + " " + lastName)
+                    return
+                }
+            }
+        }
+        newFunction("William", "Imoh").fullName()
+
+        //3. Destructuring
+
+        //es6
+        const newObject = {
+            firstName: "Harry",
+            lastName: "Potter Holt",
+            destination: "Hogwarts React Conf",
+            occupation: "Deve-wizard Avocado",
+            spell: "Vimulus Renderus!!!"
+        }
+        const {
+            firstName,
+            lastName,
+            destination,
+            occupation
+        } = newObject;
+        console.log(firstName, lastName, destination, occupation)
+
+        //4.Array Spreading
+
+        //es6
+        const west = ["Will", "Chris", "Sam", "Holly"]
+        const east = ["Gill", "Brian", "Noel", "Maggie"]
+        const combined = [...west, ...east]
+        console.log(combined)
+
+
+        //5.Template Literals
+
+        //es6
+        const planet = "earth"
+        const view = "glass"
+        var after = `Lorem ${view} dolor sit amet,
+                    consectetur adipiscing elit, ${planet} do eiusmod tempor
+                    incididunt ut labore et dolore magna aliqua. Ut enim
+                    ad minim veniam`
+        console.log(after)
+    </script>
+</body>
+
+</html>
